@@ -6,7 +6,7 @@ import io.schinzel.sites.public_site.PublicWebServer
 
 
 fun main() {
-    val siteToStart = ConfigVar.create(".env").getValue("SITE")
+    val siteToStart = ConfigVar.create("settings/.env").getValue("SITE")
     when (siteToStart) {
         "public" -> PublicWebServer()
         "admin" -> AdminWebServer()

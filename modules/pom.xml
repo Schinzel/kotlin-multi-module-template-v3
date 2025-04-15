@@ -10,7 +10,7 @@
 
     <parent>
         <groupId>io.schinzel</groupId>
-        <artifactId>kotlin-template-v2-multi-module</artifactId>
+        <artifactId>kotlin-ai-assist-dev-template</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
