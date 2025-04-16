@@ -26,10 +26,10 @@ The module reads configuration from environment variables or .env files:
 Starting the application:
 ```bash
 # Start the admin site
-SITE=admin PORT=8080 java -jar app.jar
+SITE=admin PORT=8080 java -jar myJar.jar
 
 # Start the public site
-SITE=public PORT=8000 java -jar app.jar
+SITE=public PORT=8000 java -jar myJar.jar
 ```
 
 ## Notes for AI Assistance

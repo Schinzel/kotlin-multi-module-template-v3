@@ -1,11 +1,5 @@
 # Code Standards
 
-## Modules
-Create small modules with a clear narrow purpose. A module is a self-contained, independently buildable unit of code that:
-- Implements a clearly defined domain concept or technical capability
-- Has explicit dependencies and a well-defined public API
-- Can be tested in isolation from other modules
-- Each module has a README.md that explains the purpose of the module
 
 ## Classes
 A class shall have:
