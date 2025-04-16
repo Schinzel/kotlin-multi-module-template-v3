@@ -7,15 +7,13 @@ The purpose of this module is to initialize and start the appropriate site based
 - Reads environment configuration to determine which site to start
 - Configures and initializes the selected site
 - Sets up common middleware and services
-- Handles startup logging and error reporting
+- Handles startup logging
 - Manages graceful shutdown procedures
 - Configures server ports and SSL settings
 
 ## Dependencies
 - Depends on all site modules (admin, public)
 - Depends on the Logic module for service initialization
-- May use Logic/DB module for database setup
-- May use Logic/File-Storage module for storage initialization
 
 ## Configuration
 The module reads configuration from environment variables or .env files:
@@ -32,29 +30,6 @@ SITE=admin PORT=8080 java -jar app.jar
 
 # Start the public site
 SITE=public PORT=8000 java -jar app.jar
-```
-
-Main entry point:
-```kotlin
-/**
- * The purpose of this function is to start the appropriate site based on
- * environment configuration.
- */
-fun main() {
-    val config = Configuration.loadFromEnvironment()
-    
-    val site = when (config.site.lowercase()) {
-        "admin" -> startAdminSite(config.port)
-        "public" -> startPublicSite(config.port)
-        else -> throw IllegalArgumentException("Unknown site: ${config.site}")
-    }
-    
-    Runtime.getRuntime().addShutdownHook(Thread {
-        site.stop()
-    })
-    
-    site.start()
-}
 ```
 
 ## Notes for AI Assistance

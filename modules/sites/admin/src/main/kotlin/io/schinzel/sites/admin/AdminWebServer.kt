@@ -5,10 +5,10 @@ import io.javalin.http.staticfiles.Location
 import io.schinzel.logic.db.MyDb
 
 fun main() {
-    AdminWebServer()
+    AdminWebServer(5555)
 }
 
-class AdminWebServer {
+class AdminWebServer(port: Int) {
     init {
         MyDb()
         Javalin.create { config ->
@@ -16,6 +16,6 @@ class AdminWebServer {
 
         }
             .get("/") { ctx -> ctx.result("Hello Admin World") }
-            .start(5555)
+            .start(port)
     }
 }

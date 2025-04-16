@@ -6,12 +6,15 @@ import io.schinzel.sites.public_site.PublicWebServer
 
 
 fun main() {
-    val siteToStart = ConfigVar.create("settings/.env").getValue("SITE")
+    val configVar = ConfigVar.create("settings/.env")
+    val siteToStart = configVar.getValue("SITE")
+    val port = configVar.getValue("PORT").toInt()
+
     when (siteToStart) {
-        "public" -> PublicWebServer()
-        "admin" -> AdminWebServer()
+        "public" -> PublicWebServer(port)
+        "admin" -> AdminWebServer(port)
         else -> throw IllegalArgumentException("Unknown site $siteToStart")
     }
-    println("Web server started for site $siteToStart")
+    println("Web server started for site $siteToStart on port $port")
 
 }
