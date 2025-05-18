@@ -10,3 +10,6 @@ AIs must read and understand the project description.
 Read the document below and follow the links in the document.
 - [Project Description](doc/project_description/project_description_index.md)
 
+For humans there is a suggested workflow for AI assisted development
+- [Workflow](doc/workflow/workflow.md)
+
