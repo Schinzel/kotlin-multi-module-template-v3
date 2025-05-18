@@ -25,11 +25,9 @@ Each module MUST contain:
 1. Clear README.md describing:
    - The module's primary purpose (one sentence)
    - Core responsibilities (3-5 bullet points maximum)
-   - Example usage
    - The command to test this module in isolation
 2. Explicit public API via interfaces in a dedicated `api` package
 3. Independent test suite
-4. Build configuration that declares all dependencies
 
 ### New modules
 When creating new modules, follow these guidelines:
@@ -38,7 +36,7 @@ When creating new modules, follow these guidelines:
 2. Create a README.md that clearly states the module's purpose
 3. Follow the dependency rules of the architecture
 4. Keep modules focused on a single responsibility
-5. Add the new module in [Modules](/doc/modules.md)
+5. Add the new module in [Modules](../project_description/modules.md) as both a text and as part of the diagram
 
 
 

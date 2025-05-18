@@ -5,14 +5,19 @@ This is a code standard to be followed by AIs such as Claude, Gemini, ChatGPT an
 ## Identification
 - If creating a class or function, add as last line in the header:
   ```kotlin
-  // Written by [Model] with [version of Code Standard]
+  Written by [Model] with [version of Code Standard]
   ```
   For example:
   ```kotlin
-  // Written by Claude 3.7 with Code Standard 1.2
+  Written by Claude 3.7 with Code Standard 1.2
   ```
 
 ## General Guidelines
+- All functions should be Enterprise Production Ready for live deployment. 
+- Check all of the code for bugs and implement fixes, ensure all potential edge cases are handled.
+- Everything should be held to the highest standards for performance, it should be blazing fast. 
+- Ensure maximum robustness. 
+- Try catch and finally everywhere appropriate.
 - Break code into the smallest possible, independently testable units. This is usually true, but this is extra important for AIs.
 - Extensively use interfaces to define clear contracts and decouple components.
 - Since AI might implement functions differently than expected, well-defined interfaces with clear input/output requirements ensure architectural boundaries remain intact regardless of implementation details.
