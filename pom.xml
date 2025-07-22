@@ -13,11 +13,11 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <kotlin.version>2.1.20</kotlin.version>
+        <kotlin.version>2.2.0</kotlin.version>
         <project.version>1.0-SNAPSHOT</project.version>
-        <kotlin.compiler.apiVersion>2.0</kotlin.compiler.apiVersion>
-        <kotlin.compiler.languageVersion>2.0</kotlin.compiler.languageVersion>
-        <java.version>17</java.version>
+        <kotlin.compiler.apiVersion>2.2</kotlin.compiler.apiVersion>
+        <kotlin.compiler.languageVersion>2.2</kotlin.compiler.languageVersion>
+        <java.version>21</java.version>
         <jar.name>myJar</jar.name>
     </properties>
 
@@ -90,13 +90,32 @@
                     </executions>
                 </plugin>
                 <plugin>
+                    <!-- Compiles Java source code.
+                    Even though this is a Kotlin-only project, this plugin may be needed
+                    for proper IDE integration and build tool compatibility. -->
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.13.0</version>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                        <release>${java.version}</release>
+                        <compilerArgs>
+                            <arg>-parameters</arg>
+                        </compilerArgs>
+                    </configuration>
+                </plugin>
+                <plugin>
                     <!-- Compiles Kotlin source code to JVM bytecode.
                     This plugin handles all Kotlin compilation in the project. -->
                     <groupId>org.jetbrains.kotlin</groupId>
                     <artifactId>kotlin-maven-plugin</artifactId>
                     <version>${kotlin.version}</version>
                     <configuration>
+                        <languageVersion>${kotlin.compiler.languageVersion}</languageVersion>
+                        <apiVersion>${kotlin.compiler.apiVersion}</apiVersion>
                         <jvmTarget>${java.version}</jvmTarget>
+                        <javaParameters>true</javaParameters>
                         <sourceDirs>
                             <!-- Define Kotlin source directory to avoid
                             warnings about missing Java sources in pure Kotlin projects.-->
