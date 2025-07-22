@@ -28,3 +28,6 @@ target/
 #Heroku config file
 config/.env
 
+# Example env file should be tracked
+!config/.env.example
+
