@@ -7,7 +7,7 @@ This document describes the technology stack used in the application. It serves 
 
 ### Programming Language
 - **Kotlin** - Primary programming language
-  - Version: 2.1.x
+  - Version: 2.2.x
 
 ### Web Framework
 - **Javalin** - Lightweight web framework for Kotlin/Java

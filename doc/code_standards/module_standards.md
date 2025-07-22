@@ -36,7 +36,7 @@ When creating new modules, follow these guidelines:
 2. Create a README.md that clearly states the module's purpose
 3. Follow the dependency rules of the architecture
 4. Keep modules focused on a single responsibility
-5. Add the new module in [Modules](../project_description/modules.md) as both a text and as part of the diagram
+5. Add the new module in [Modules](../tech/modules.md) as both a text and as part of the diagram
 
 
 

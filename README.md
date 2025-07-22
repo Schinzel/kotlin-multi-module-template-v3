@@ -4,11 +4,11 @@ Kotlin multi-module projects that leverage AI-assisted development.
 
 AIs must read and adhere to the code standards.
 Read the document below and follow the links in the document.
-- [Code Standards](doc/code_standards/code_standards_index.md)
+- [Code Standards](doc/code_standards/_index.md)
 
 AIs must read and understand the project description.
 Read the document below and follow the links in the document.
-- [Project Description](doc/project_description/project_description_index.md)
+- [Project Description](doc/tech/_index.md)
 
 ## 🚀 Getting Started
 
