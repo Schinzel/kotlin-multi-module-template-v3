@@ -70,6 +70,11 @@
                 </configuration>
             </plugin>
             <plugin>
+                <!-- Kotlin code style and formatting -->
+                <groupId>com.github.gantsign.maven</groupId>
+                <artifactId>ktlint-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>3.2.4</version>

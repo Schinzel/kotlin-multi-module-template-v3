@@ -62,6 +62,11 @@
                     <target>8</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <!-- Kotlin code style and formatting -->
+                <groupId>com.github.gantsign.maven</groupId>
+                <artifactId>ktlint-maven-plugin</artifactId>
+            </plugin>
         </plugins>
     </build>
 

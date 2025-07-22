@@ -13,14 +13,16 @@ fun main() {
  * http://127.0.0.1:5555/index.html
  * java -jar myJar.jar
  */
-class PublicWebServer(port: Int) {
+class PublicWebServer(
+    port: Int,
+) {
     init {
         MyDb()
 
-        Javalin.create { config ->
-            config.staticFiles.add("/my_project/sites/public", Location.CLASSPATH)
-        }
-            .get("/") { ctx -> ctx.result("Hello Public World") }
+        Javalin
+            .create { config ->
+                config.staticFiles.add("/my_project/sites/public", Location.CLASSPATH)
+            }.get("/") { ctx -> ctx.result("Hello Public World") }
             .start(port)
     }
 }

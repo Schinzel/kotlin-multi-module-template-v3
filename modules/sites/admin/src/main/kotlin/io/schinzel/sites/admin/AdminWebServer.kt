@@ -8,14 +8,15 @@ fun main() {
     AdminWebServer(5555)
 }
 
-class AdminWebServer(port: Int) {
+class AdminWebServer(
+    port: Int,
+) {
     init {
         MyDb()
-        Javalin.create { config ->
-            config.staticFiles.add("/my_project/sites/admin", Location.CLASSPATH)
-
-        }
-            .get("/") { ctx -> ctx.result("Hello Admin World") }
+        Javalin
+            .create { config ->
+                config.staticFiles.add("/my_project/sites/admin", Location.CLASSPATH)
+            }.get("/") { ctx -> ctx.result("Hello Admin World") }
             .start(port)
     }
 }

@@ -1,8 +1,8 @@
 # Kotlin multi-module template V3
-The purpose of this project is to serve as a starting point for new 
+The purpose of this project is to serve as a starting point for new
 Kotlin multi-module projects that leverage AI-assisted development.
 
-AIs must read and adhere to the code standards. 
+AIs must read and adhere to the code standards.
 Read the document below and follow the links in the document.
 - [Code Standards](doc/code_standards/code_standards_index.md)
 
