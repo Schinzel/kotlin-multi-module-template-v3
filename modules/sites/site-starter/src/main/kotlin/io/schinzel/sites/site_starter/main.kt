@@ -5,7 +5,7 @@ import io.schinzel.sites.admin.AdminWebServer
 import io.schinzel.sites.public_site.PublicWebServer
 
 fun main() {
-    val configVar = ConfigVar.create("settings/.env")
+    val configVar = ConfigVar.create("config/.env")
     val siteToStart = configVar.getValue("SITE")
     val port = configVar.getValue("PORT").toInt()
 
