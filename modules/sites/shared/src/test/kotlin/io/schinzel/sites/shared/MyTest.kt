@@ -1,4 +1,4 @@
-package io.schinzel
+package io.schinzel.sites.shared
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test

@@ -1,4 +1,4 @@
-package io.schinzel
+package io.schinzel.logic.file_storage
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
