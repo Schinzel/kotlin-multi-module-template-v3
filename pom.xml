@@ -90,12 +90,16 @@
                     </executions>
                 </plugin>
                 <plugin>
+                    <!-- Compiles Kotlin source code to JVM bytecode.
+                    This plugin handles all Kotlin compilation in the project. -->
                     <groupId>org.jetbrains.kotlin</groupId>
                     <artifactId>kotlin-maven-plugin</artifactId>
                     <version>${kotlin.version}</version>
                     <configuration>
                         <jvmTarget>${java.version}</jvmTarget>
                         <sourceDirs>
+                            <!-- Define Kotlin source directory to avoid
+                            warnings about missing Java sources in pure Kotlin projects.-->
                             <sourceDir>${project.basedir}/src/main/kotlin</sourceDir>
                         </sourceDirs>
                     </configuration>
