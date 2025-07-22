@@ -168,9 +168,11 @@
                                 </goals>
                                 <configuration>
                                     <echos>
-                                        <echo></echo>
-                                        <echo>🚀 Starting build process...</echo>
-                                        <echo></echo>
+                                        <echo>************************************</echo>
+                                        <echo>**                                **</echo>
+                                        <echo>**  🚀 Starting build process...  **</echo>
+                                        <echo>**                                **</echo>
+                                        <echo>************************************</echo>
                                     </echos>
                                 </configuration>
                             </execution>

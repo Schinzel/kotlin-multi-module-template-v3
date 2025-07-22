@@ -108,10 +108,12 @@
                         </goals>
                         <configuration>
                             <echos>
-                                <echo></echo>
-                                <echo>✨ Successfully created: myJar.jar</echo>
-                                <echo>🚀 Run with: java -jar myJar.jar</echo>
-                                <echo></echo>
+                                <echo>*****************************************</echo>
+                                <echo>**                                     **</echo>
+                                <echo>**  ✨ Successfully created: myJar.jar  **</echo>
+                                <echo>**  🚀 Run with: java -jar myJar.jar   **</echo>
+                                <echo>**                                     **</echo>
+                                <echo>*****************************************</echo>
                             </echos>
                         </configuration>
                     </execution>
