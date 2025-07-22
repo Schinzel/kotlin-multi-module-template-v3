@@ -8,7 +8,7 @@ Read the document below and follow the links in the document.
 
 AIs must read and understand the project description.
 Read the document below and follow the links in the document.
-- [Project Description](doc/tech/_index.md)
+- [Tech](doc/tech/_index.md)
 
 ## 🚀 Getting Started
 
